@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .instructions {
+        color: green;
+      }
+      .instructions span {
+        font-size: large;
+      }
+    </style>
+    <title>Cookies demo</title>
+  </head>
+  <body>
+    <h1>Cookies demo</h1>
+    <div id="cookiesDiv"></div>
+    <h2 class="instructions">
+      Create cookie <span>(or update an existing one)</span>
+    </h2>
+    <form onsubmit="createFormSubmited()" name="createCookieForm">
+      <input
+        required
+        name="cookieKeyInputField"
+        placeholder="Enter cookie key"
+      />
+      <input
+        required
+        name="cookieValueInputField"
+        placeholder="Enter cookie value"
+      />
+      <button type="submit">Submit</button>
+    </form>
+    <form onsubmit="deleteFormSubmited()" name="deleteCookieForm">
+      <h2 class="instructions">Enter and submit key of cookie to delete</h2>
+      <input required placeholder="Enter key" name="deleteCookieKey" />
+      <button type="submit">Submit to delete</button>
+    </form>
+
+    <script src="./practical.js"></script>
+  </body>
+</html>
